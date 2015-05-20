@@ -1,10 +1,3 @@
-//= require Main
-
-/*
-Generally you do not need to edit this file. You can start writing
-your code in the provided "Main" class.
-*/
-
 // Needed for the dizmo menu to work
 function showBack() {
     dizmo.showBack();
@@ -20,5 +13,5 @@ var events = {};
 
 // As soon as the dom is loaded, and the dizmo is ready, instantiate the main class
 window.document.addEventListener('dizmoready', function() {
-    new ##PROJECTNAME##.Main();
+    // Your code should be in here so that it is secured that the dizmo is fully loaded
 });
