@@ -5,14 +5,10 @@ Generally you do not need to edit this file. You can start writing
 your code in the provided "Main" class.
 */
 
-// Needed for the dizmo menu to work
+// If your dizmo has a back side and you want to access it include this function,
+// otherwise you can delete it!
 function showBack() {
     dizmo.showBack();
-}
-
-// Needed for the dizmo menu to work
-function showFront() {
-    dizmo.showFront();
 }
 
 // Helper object to attach all the events to
