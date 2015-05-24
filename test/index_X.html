@@ -12,13 +12,24 @@
     <script type="text/javascript" src="lib/qunit/qunit.js"></script>
     <!-- End of jQuery libraries -->
 
-    <!-- Utilities for dizmos -->
-    <script type="text/javascript" src="lib/dizmo/dizmoHelper.js"></script>
-    <!-- End of utilities -->
+    <style type="text/css">
+    #qunit-testrunner-toolbar {
+        display: none;
+    }
 
-    <!-- Dizmo styling -->
-    <script type="text/javascript" src="lib/dizmo/dizmoElements.js"></script>
-    <!-- End of dizmo styling -->
+    #qunit-userAgent {
+        display: none;
+    }
+
+    #qunit-tests a {
+        display: none;
+    }
+
+    #front {
+        overflow: auto;
+        -apple-dashboard-region: dashboard-region(control rectangle);
+    }
+    </style>
 </head>
 <body>
     <div id="front">
@@ -27,5 +38,14 @@
     </div>
 
     <script type="text/javascript" src="test.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery('a').on('click', function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                return false
+            });
+        });
+    </script>
 </body>
 </html>
