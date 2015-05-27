@@ -9,5 +9,5 @@ window.document.addEventListener('dizmoready', function() {
     // Your code should be in here so that it is secured that the dizmo is fully loaded
     document.getElementById('doneBtn').onclick = function() {
         dizmo.showFront();
-    }
+    };
 });
