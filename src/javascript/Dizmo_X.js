@@ -120,10 +120,10 @@ Class("##PROJECTNAME##.Dizmo", {
              */
             setSize: function(width, height) {
                 if (jQuery.type(width) !== 'number') {
-                    throw 'Please provide only numbers for width!'
+                    throw 'Please provide only numbers for width!';
                 }
                 if (jQuery.type(height) !== 'number') {
-                    throw 'Please provide only numbers for height!'
+                    throw 'Please provide only numbers for height!';
                 }
 
                 dizmo.setSize(width, height);
