@@ -7,7 +7,7 @@ Skeleton for the grace-dizmo project. Can no be used by itself and will be pulle
 Skeletons
 ---------
 
-There are two skeletons for use in the grace dizmo plugin: _default_ and _joose_. The _default_ skeleton provides only the bare minimum to start your first dizmo while _joose_ provides the joose framework (http://www.joose.it).
+There are two skeletons for use in the grace dizmo plugin: _default_ and _joose_. The _default_ skeleton provides only the bare minimum to start your first dizmo while _joose_ provides the joose framework (http://www.joose.it). Each of the skeletons can be found in their own branch in the repository, named after the skeleton's name.
 
 Default
 -------
