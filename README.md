@@ -7,12 +7,12 @@ Skeleton for the grace-dizmo project. Can no be used by itself and will be pulle
 Skeletons
 ---------
 
-There are two skeletons for use in the grace dizmo plugin: _default_ and _joose_. Default provide only the bare minimum and jQuery to start your first dizmo. Joose provide the joose framework (http://www.joose.it).
+There are two skeletons for use in the grace dizmo plugin: _default_ and _joose_. The _default_ skeleton provides only the bare minimum to start your first dizmo while _joose_ provides the joose framework (http://www.joose.it).
 
 Default
 -------
 
-The _default_ skeleton provide only the bare necessities. This means no class framework and no helper classes for interaction with the dizmo space (one has to use the global _dizmo_, _viewer_, _bundle_ classes provided). This is intended for a _quick and dirty_ way to create dizmos on the fly without much depth. If you want to create a larger dizmo, taking the _joose_ skeleton is preferred.
+The _default_ skeleton provides only the bare necessities. This means no class framework and no helper classes for interaction with the dizmo space (one has to use the global _dizmo_, _viewer_, _bundle_ classes provided). This is intended for a _quick and dirty_ way to create dizmos on the fly without much depth. If you want to create a larger dizmo, taking the _joose_ skeleton is preferred.
 
 Joose
 -----
