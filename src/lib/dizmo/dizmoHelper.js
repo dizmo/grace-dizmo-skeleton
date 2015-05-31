@@ -102,7 +102,7 @@ Class('DizmoHelper.Presentation.Controller', {
 
                 var pubStore = dizmo.publicStorage;
 
-                pubStore.subscribeTo('presentation/step', function(path, val, oldVal) {
+                pubStore.subscribeToProperty('presentation/step', function(path, val, oldVal) {
                     var cb;
                     var step = parseInt(val);
                     var oldStep = parseInt(oldVal);
@@ -155,7 +155,7 @@ Class('DizmoHelper.Presentation.Controller', {
                     }
                 });
 
-                pubStore.subscribeTo('presentation/animationRunning', function(path, val, oldVal) {
+                pubStore.subscribeToProperty('presentation/animationRunning', function(path, val, oldVal) {
                     var cb = self.getAnimationChangedCallback();
 
                     if (typeof oldVal === 'undefined') {
@@ -184,7 +184,7 @@ Class('DizmoHelper.Presentation.Controller', {
                     }
                 });
 
-                pubStore.subscribeTo('presentation/globalTimerRunning', function(path, val, oldVal) {
+                pubStore.subscribeToProperty('presentation/globalTimerRunning', function(path, val, oldVal) {
                     if (!dizmo.publicStorage.getProperty('presentation/hasGlobalTimer')) {
                         console.log('You have to enable the global timer first!');
                         return;
@@ -699,7 +699,7 @@ Class('DizmoHelper.Presentation.RemoteController', {
             var dizmo = self.getDizmo();
             var pubStore = dizmo.publicStorage;
 
-            pubStore.subscribeTo('presentation/totalSteps', function(path, val, oldVal) {
+            pubStore.subscribeToProperty('presentation/totalSteps', function(path, val, oldVal) {
                 var steps = parseInt(val);
 
                 if (isNaN(steps)) {
@@ -709,7 +709,7 @@ Class('DizmoHelper.Presentation.RemoteController', {
                 self.setTotalSteps(steps);
             });
 
-            pubStore.subscribeTo('presentation/step', function(path, val, oldVal) {
+            pubStore.subscribeToProperty('presentation/step', function(path, val, oldVal) {
                 var step = parseInt(val);
 
                 if (isNaN(step)) {
@@ -719,7 +719,7 @@ Class('DizmoHelper.Presentation.RemoteController', {
                 self.step = step;
             });
 
-            pubStore.subscribeTo('presentation/animationRunning', function(path, val, oldVal) {
+            pubStore.subscribeToProperty('presentation/animationRunning', function(path, val, oldVal) {
                 var cb = self.getAnimationChangedCallback();
 
                 if (typeof oldVal === 'undefined') {
@@ -748,7 +748,7 @@ Class('DizmoHelper.Presentation.RemoteController', {
                 }
             });
 
-            pubStore.subscribeTo('presentation/globalTimerRunning', function(path, val, oldVal) {
+            pubStore.subscribeToProperty('presentation/globalTimerRunning', function(path, val, oldVal) {
                 if (!self.hasGlobalTimer()) {
                     console.log('You have to enable the global timer first!');
                     return;
