@@ -950,7 +950,7 @@ Class('DizmoHelper.Utils', {
              * @param  {Object} otherDizmo A complete dizmo object (as provided by onDock, onUndock, canDock)
              * @return {String}            A string with either 'left', 'right', 'top', 'bottom'
              */
-            getDizmoPosition: function(mydizmo, otherDizmo) {
+            getDizmoPosition: function(mydizmo, otherdizmo) {
                 var myRight = null;
                 var myLeft = null;
                 var myTop = null;
@@ -969,10 +969,10 @@ Class('DizmoHelper.Utils', {
                 }
 
                 try {
-                    myRight = mydizmo.getAttribute('geometry/x');
-                    myLeft = myRight - mydizmo.getAttribute('geometry/width');
+                    myLeft = mydizmo.getAttribute('geometry/x');
+                    myRight = myLeft + mydizmo.getAttribute('geometry/width');
                     myTop = mydizmo.getAttribute('geometry/y');
-                    myBottom = myTop + mydizmo.getAttribute('geometry/height') + 40;
+                    myBottom = myTop - mydizmo.getAttribute('geometry/height');
                 } catch (e) {
                     throw {
                         name: 'mustBeADizmoObject',
@@ -981,10 +981,10 @@ Class('DizmoHelper.Utils', {
                 }
 
                 try {
-                    otherRight = otherDizmo.getAttribute('geometry/x');
-                    otherLeft = otherRight - otherDizmo.getAttribute('geometry/width');
-                    otherTop = otherDizmo.getAttribute('geometry/y');
-                    otherBottom = otherTop + otherDizmo.getAttribute('geometry/height') + 40;
+                    otherLeft = otherdizmo.getAttribute('geometry/x');
+                    otherRight = otherLeft + otherdizmo.getAttribute('geometry/width');
+                    otherTop = otherdizmo.getAttribute('geometry/y');
+                    otherBottom = otherTop - otherdizmo.getAttribute('geometry/height');
                 } catch (e) {
                     throw {
                         name: 'mustBeADizmoObject',
