@@ -178,14 +178,10 @@ Class("##PROJECTNAME##.Dizmo", {
 
             // Show back and front listeners
             dizmo.onShowBack(function() {
-                jQuery("#front").hide();
-                jQuery("#back").show();
                 jQuery(events).trigger('dizmo.turned', ['back']);
             });
 
             dizmo.onShowFront(function() {
-                jQuery("#back").hide();
-                jQuery("#front").show();
                 jQuery(events).trigger('dizmo.turned', ['front']);
             });
 
