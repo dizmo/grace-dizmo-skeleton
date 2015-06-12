@@ -142,7 +142,7 @@ Class("##PROJECTNAME##.Dizmo", {
                 }
 
                 var id = null;
-                id = dizmo.privateStorage.subscribeTo(path, function(path, val, oldVal) {
+                id = dizmo.privateStorage.subscribeToProperty(path, function(path, val, oldVal) {
                     callback.call(self, val, oldVal);
                 });
 
@@ -150,7 +150,7 @@ Class("##PROJECTNAME##.Dizmo", {
             },
 
             unsubscribe: function(id) {
-                dizmo.privateStorage.unsubscribe(id);
+                dizmo.privateStorage.unsubscribeProperty(id);
             }
         }
     },
