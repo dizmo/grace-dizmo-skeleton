@@ -1,21 +1,15 @@
-###PROJECTNAME## Dizmo Help
+#help Dizmo Help
 
-###Table of contents
-1. Welcome to ##PROJECTNAME## Dizmo
-   1.1 Summary
-   1.2 Specifications
-   1.3 Overview of ##PROJECTNAME##
-2. Usage of ##PROJECTNAME##
-3. Changing ##PROJECTNAME## settings
+Table of contents
+1. Dizmo
+2. Description
+3. Information
 
-###1. Welcome to ##PROJECTNAME## Dizmo
+##1. Dizmo
 
-####1.1 Summary
+##2. Description
 
-####1.2 Specifications
-
-####1.3 Overview of ##PROJECTNAME## Dizmo
-
-###2. Usage of ##PROJECTNAME##
-
-###3. Changing ##PROJECTNAME## settings
+##3. Information
+Developer:
+Contact:
+Website:
