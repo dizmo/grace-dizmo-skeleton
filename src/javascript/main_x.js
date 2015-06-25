@@ -1,4 +1,4 @@
-//= require Dizmo
+//= require dizmo
 
 Class("##PROJECTNAME##.Main", {
     has: {

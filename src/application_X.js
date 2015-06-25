@@ -1,4 +1,4 @@
-//= require Main
+//= require main
 
 /*
 Generally you do not need to edit this file. You can start writing
