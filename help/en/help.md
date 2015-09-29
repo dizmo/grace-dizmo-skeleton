@@ -2,23 +2,28 @@
 
 **Table of contents**
 
-1. Summary
+1. Screenshots
 2. Description
-3. Examples
-4. Additional Information
+3. What is new in VX.Y.Z
+4. Works well with
+5. Additional information
 
-## Summary
+## Screenshots
 
- (A short summary of the purpose of the dizmo)
+Add your screenshots measuring width 400 px and height 275 px that illustrate your dizmo.
+![Screenshot placeholder](./ScreenshotPlaceholder_400x275.jpg)
 
 ## Description
 
-(A more in depth description of what can be done with the dizmo and how it should be used. This may include images as well)
-![The dizmo Icon](./Icon.png =32x32)
+Describe what can be done with the dizmo and how it should be used.
 
-## Examples
+## What is new in VX.Y.Z
 
-(Some examples explaining how the dizmo could be used)
+Explain the improvements of the newest dizmo, then list those of each published version.
+
+## Works well with
+
+(Optional) List the hardware and/or the dizmos with which your dizmo can be used.
 
 ## Additional Information
 
