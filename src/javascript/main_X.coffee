@@ -14,5 +14,5 @@ class ##PROJECTNAME##.Main
     _initEvents: ->
         self = this
 
-        jQuery('.done-btn').on 'click' () ->
+        jQuery('.done-btn').on 'click', ->
             ##PROJECTNAME##.Dizmo.showFront()
