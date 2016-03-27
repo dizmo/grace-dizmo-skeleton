@@ -2,9 +2,9 @@
 window.##PROJECTNAME## or= {}
 
 class ##PROJECTNAME##.Dizmo
-    @showBack: -> dizmo.showBack()
+    @showBack: -> do dizmo.showBack
 
-    @showFront: -> dizmo.showFront()
+    @showFront: -> do dizmo.showFront
 
     @getId: -> dizmo.identifier
 
@@ -12,26 +12,24 @@ class ##PROJECTNAME##.Dizmo
 
     @save: (path, value) -> dizmo.privateStorage.setProperty path, value
 
-    @setTitle: (title) -> dizmo.setAttribute 'settings/title', title if typeof title is string
+    @setTitle: (title) -> dizmo.setAttribute 'settings/title', title if (typeof title) is string
 
     @publish: (path, value) ->
-        if path is undefined
-            return
-
-        if value is undefined
+        if (typeof value) is 'undefined'
             value = path
             path = 'stdout'
 
-        dizmo.publicStorage.setProperty path, value
+        if (typeof value) isnt 'undefined':
+            dizmo.publicStorage.setProperty path, value
 
     @unpublish: (path = 'stdout') -> dizmo.publicStorage.deleteProperty path
 
-    @getSize: -> return dizmo.getSize()
+    @getSize: -> do dizmo.getSize
 
     @setSize: (width, height) ->
-        if typeof width isnt 'number'
+        if (typeof width) isnt 'number'
             throw 'Please provide only numbers for width!'
-        if typeof height isnt 'number'
+        if (typeof height) isnt 'number'
             throw 'Please provide only numbers for height!'
 
         dizmo.setSize width, height
@@ -39,11 +37,11 @@ class ##PROJECTNAME##.Dizmo
     @subscribe: (path, callback) ->
         self = this
 
-        if typeof callback is 'function'
+        if (typeof callback) is 'function'
             console.log('Please only provide a function as the callback.')
             return null
 
-        if typeof path is 'string'
+        if (typeof path) is 'string'
             console.log('Please only provide a string as the path.')
             return null
 
@@ -52,24 +50,22 @@ class ##PROJECTNAME##.Dizmo
 
     @unsubscribe: (id) -> dizmo.privateStorage.unsubscribeProperty id
 
-    constructor: ->
+    @_init: ->
         self = this
 
-        self._setAttributes()
-        self._initEvents()
+        do self._initEvents
+        do self._setAttributes
 
-    _initEvents: ->
-        self = this
-
+    @_initEvents: ->
         dizmo.onShowBack -> jQuery(events).trigger 'dizmo.turned', ['back']
 
         dizmo.onShowFront -> jQuery(events).trigger 'dizmo.turned', ['front']
 
         dizmo.subscribeToAttribute 'geometry/height', (path, val, oldVal) ->
-            jQuery(events).trigger 'dizmo.resized', [dizmo.getWidth(), dizmo.getHeight()]
+            jQuery(events).trigger 'dizmo.resized', [do dizmo.getWidth, do dizmo.getHeight]
 
         dizmo.subscribeToAttribute 'geometry/width', (path, val, oldVal) ->
-            jQuery(events).trigger 'dizmo.resized', [dizmo.getWidth(), dizmo.getHeight()]
+            jQuery(events).trigger 'dizmo.resized', [do dizmo.getWidth, do dizmo.getHeight]
 
         viewer.subscribeToAttribute 'settings/displaymode', (path, val, oldVal) ->
             if val is 'presentation'
