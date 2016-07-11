@@ -7,9 +7,10 @@ class ##PROJECTNAME##.Main
     @init: ->
         self = this
 
-        do self._initEvents
+        self._initEvents()
+        ##PROJECTNAME##.Dizmo.init()
 
     @_initEvents: ->
         self = this
 
-        jQuery('.done-btn').on 'click', -> do ##PROJECTNAME##.Dizmo.showFront
+        jQuery('.done-btn').on('click', -> ##PROJECTNAME##.Dizmo.showFront())
