@@ -19,7 +19,7 @@ class ##PROJECTNAME##.Dizmo
             value = path
             path = 'stdout'
 
-        if (typeof value) isnt 'undefined':
+        if (typeof value) isnt 'undefined'
             dizmo.publicStorage.setProperty(path, value)
 
     @unpublish: (path = 'stdout') -> dizmo.publicStorage.deleteProperty(path)
@@ -81,5 +81,5 @@ class ##PROJECTNAME##.Dizmo
 
         dizmo.onUndock((undockedDizmo) -> jQuery(events).trigger('dizmo.undocked'))
 
-    _setAttributes: ->
+    @_setAttributes: ->
         dizmo.setAttribute('settings/usercontrols/allowresize', true)
