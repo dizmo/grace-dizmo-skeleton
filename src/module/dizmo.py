@@ -57,10 +57,4 @@ def setup():
     set_attribute('settings/usercontrols/allowresize', True)
     candock(True)
 
-    def displaymode_cb(path, val, old_val):
-        if val == 'presentation':
-            set_attribute('state/framehidden', True)
-        else:
-            set_attribute('state/framehidden', False)
-
     viewer.subscribeToAttribute('settings/displaymode', displaymode_cb)
