@@ -68,11 +68,6 @@ class ##PROJECTNAME##.Dizmo
             jQuery(events).trigger('dizmo.resized', [dizmo.getWidth(), dizmo.getHeight()])
 
         viewer.subscribeToAttribute 'settings/displaymode', (path, val, oldVal) ->
-            if val is 'presentation'
-                dizmo.setAttribute('state/framehidden', true)
-            else
-                dizmo.setAttribute('state/framehidden', false)
-
             jQuery(events).trigger('dizmo.onmodechanged', [val])
 
         dizmo.canDock(true)
